@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.apiproduto.api.models.Produto;
 import com.apiproduto.api.models.ProdutoRepository;
 
 
@@ -23,11 +24,13 @@ public class ProdutoController {
 
     @GetMapping("/cadastro")
     public String mostrarFormulario(Model model){
+        model.addAttribute("produto", new Produto());
         return "cadastrar";
     }
 
     @PostMapping("/cadastro")
-    public String cadastrarProduto(Model model){
+    public String cadastrarProduto(Produto produto){
+        repository.save(produto);
         return "cadastrar";
     }
 }
