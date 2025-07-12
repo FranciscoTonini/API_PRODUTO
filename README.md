@@ -1,4 +1,3 @@
-Aqui está um README em português do Brasil para o seu repositório do GitHub, seguindo o estilo do exemplo fornecido:
 
 # 📦 API de Produtos - Sistema de Gestão de Produtos
 
